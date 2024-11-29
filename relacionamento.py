@@ -40,6 +40,7 @@ class Continente:
     def exibir_pais_mais_extenso(self):
         pais_mais_extenso = ""
         tamanho = 0
+        tamanho += self.are
         for pais in self.paises:
             if pais.area > tamanho:
                 pais_mais_extenso = pais.nome
@@ -47,6 +48,7 @@ class Continente:
 
 pais1 = Pais( "Brasil",212.6,8.510)
 pais2 = Pais("Peru",34.35,1.285)
+pais3 = Pais("EUA",54.35,7.285)
 
 pais1.imprimir_populacao()
 pais1.imprimir_area()
@@ -54,8 +56,9 @@ pais1.calcular_Densidade_Demografica()
 
 print("--- --- ---")
 continente1 = Continente ("America do sul")
-continente1.adicionarPais(pais1)
+continente1.adicionarPais(pais3)
 continente1.adicionarPais(pais2)
+continente1.adicionarPais(pais1)
 continente1.imprimir_informacoes()
 continente1.exibir_pais_mais_populoso()
 continente1.exibir_pais_mais_extenso()
